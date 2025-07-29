@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "CSS Selector Generator",
+  "version": "1.0",
+  "description": "Génère différents sélecteurs CSS pour cibler les éléments du DOM",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CSS Selector Generator"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
